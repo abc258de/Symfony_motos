@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %} 
+
+{% block body %}
+
+  {# SECTION 1 ----------------------------- #} 
+
+  <div class="section_top_page">
+    <div class="section1">
+      {# <div class="carousel-container"></div> #}
+      <div class="intro">
+        <h1>The Best Bikes<br>Bro!<h1>
+        <div class="buttonss1">
+          <button id="btn1s1">New Bikes</button>
+          <button id="btn2s1">Accessories</button>
+        </div>
+      </div>
+
+      {# <div class="intro-img">
+      </div> #}
+      
+    </div>
+  </div>
+  {# end section top page #} 
+  
+
+  {# SECTION 2 ----------------------------- #}
+
+<div class="margins">
+  <div class="section2">
+    <div class="column1">
+  
+      <div class="about">
+        <h2>Welcome to Bro!Land</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, culpa excepturi voluptatibus expedita harum quas fugiat corrupti maxime id earum provident aliquam consequatur minima corporis ipsam quis aliquid doloremque eveniet rem pariatur dolorem consectetur laboriosam! At eum quibusdam non, maxime consequuntur temporibus dicta, debitis eligendi neque officia deleniti, doloribus tempore quod numquam laboriosam voluptas aut hic. Consequatur nulla harum, aut a quam saepe minus id accusamus, repellendus soluta dolor? Perferendis unde asperiores autem iure sequi odio minus corporis, quidem culpa possimus consectetur ea commodi accusamus delectus animi eligendi blanditiis amet suscipit iusto, consequatur vitae debitis adipisci. Totam repellat animi perspiciatis dolorem pariatur distinctio excepturi sed vel debitis, ipsa labore velit, quos voluptates inventore eligendi? Fugiat laboriosam consequatur placeat deleniti natus?</p>  
+      </div>
+
+      <div class="bikes">
+        <div class="stock">
+            <h2>In Stock</h2>
+                <ul> 
+                    {% for k in bikesTable %}
+                    <li>
+                        <a href={{ path('show', {id:k.id, nom:k.nom})}}>
+                        {{k.nom}} {{k.marque}} </a>
+                    </li>
+                    {% else %}
+                        <p>Hhmm ... Not found.</p>  
+                    {% endfor %} 
+                </ul>
+        </div>
+
+        <div class="new_bikes">
+          <h2>Last Entries</h2>
+            <ul>
+                {% for k in bikesNew %}
+                <li>
+                    <a href={{ path('show', {id:k.id, nom:k.nom})}}>
+                        {{k.nom}} {{k.marque}} {{k.annee}}</a>
+                </li>
+
+                {% else %}
+                 <p>Hhmm ... Vous faites quoi?</p> 
+                {% endfor %}
+            </ul>
+        
+        </div>
+
+        <div class="crud">
+          <h2>Admin</h2>
+            <ul>
+              <li> Edit <span style="font-size:10px">(https://127.0.0.1:8000/edit/id)</span></li>
+              <li> <a href="{{ path('form_create') }}"><span style="text-decoration:underline">Create</span></a></li>
+              <li> Delete <span style="font-size:10px">(https://127.0.0.1:8000/delete/id) </li>             
+            </ul>
+        </div>
+
+      </div>
+      
+    </div>
+
+    
+    <div class="column2">
+      <h2>Today's Best Promo</h2>
+      <div class="banners_bikes"><img src="assets/images/adbanner2.jpg" alt="banners for bike sales"></div>
+    </div>
+
+  </div>
+</div>
+
+ 
+
+{% endblock %} 

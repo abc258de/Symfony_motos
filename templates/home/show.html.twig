@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}{{slug}}{% endblock %} #}
+{% block title %}{{bikeSolo.nom}}#{{bikeSolo.id}}{% endblock %}
+
+
+{% block body %}
+<div class="section1_show"> 
+<div class="margins">
+
+  <div class="show_bikename"><h3>{{bikeSolo.nom ~  ', ' ~ bikeSolo.marque ~  '-' ~ bikeSolo.annee}}</h3></div>
+  <br>
+
+      <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Marque</th>
+                <th>Couleur</th>
+                <th>Annee</th>
+                <th>Prix</th>
+                <th></th>
+                <th></th>
+            </tr> 
+        </thead>
+        <tbody> 
+            <tr>
+                <td>{{bikeSolo.nom}}</td>
+                <td>{{bikeSolo.marque}}</td>
+                <td>{{bikeSolo.couleur}}</td>
+                <td>{{bikeSolo.annee}}</td>
+                <td>{{bikeSolo.prix}}</td>
+                <td><a href="{{ path('form_edit', {id: bikeSolo.id}) }}">Edit</a></td>
+                <td><a href="{{ path('form_delete', {id: bikeSolo.id}) }}" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</a></td>
+            </tr>
+        </tbody>
+    </table> 
+
+</div>
+</div>
+{% endblock %} 
+ 
+ 

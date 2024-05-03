@@ -1,0 +1,85 @@
+.form {
+  padding-top: 25px;
+  padding-bottom: 35px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.form form #motorcycles{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 1rem ;
+}
+
+.form form #motorcycles div{
+  /* width: 100rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.form form #motorcycles div label{
+  width: 13rem;
+  align-items: center;
+  /* margin-right: 5rem; */
+}
+
+.form form #motorcycles div input{
+  width: 50rem;
+  height: 3rem;
+  color: grey;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.form form #motorcycles div textarea{
+  width: 50rem;
+  height: 15rem;
+  color: grey;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.form form #motorcycles div button{
+  width: 8.4rem;
+  height: 3rem;
+  background-color:white;
+  border-radius: 20px;
+  border: 2px solid black;
+  color: black;
+  /* font-weight: bold; */
+  font-size: 18px;
+  margin-left: 56rem;
+  margin-top: 15px;
+  /* padding: 5px 10px; */
+}
+
+.form form #motorcycles div button:hover{
+  width: 8.4rem;
+  height: 3rem;
+  background-color:rgb(196, 35, 49);
+  border-radius: 20px;
+  border: 2px solid white;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 18px;
+  margin-left: 56rem;
+  margin-top: 15px;
+  /* padding: 5px 10px; */
+  cursor: pointer;
+}
+
+
+/* #motorcycles_model{
+  background-color: red;
+} */
+
+
+
+
+

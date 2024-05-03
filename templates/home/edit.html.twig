@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} #{{ motoSolo.id ~" "~ motoSolo.nom }}{% endblock %}
+
+{% block body %}
+
+<div class="section_top_page">
+  <div class="margins">
+    <div class='form'>
+        <h1>{{ motoSolo.nom|title ~" "~ motoSolo.marque }}</h1><br>
+        {{ form(monForm) }}
+    </div>
+  </div> 
+</div>
+    {% endblock %}  

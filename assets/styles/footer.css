@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper_base {
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: rgb(30, 34, 50);
+  margin-top: 30px;
+  text-align: center;
+  color: rgb(189, 189, 190);
+  padding-top: 5px;
+  width: 100%;
+}
+
+footer p {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.fticons{
+  margin-top: 10px;
+}
+
+#iconft {
+  margin-right: 10px;
+  color: rgb(239, 232, 231);
+  /* padding-top:10px; */
+}
